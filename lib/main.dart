@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_platzi_travels/src/description_place.dart';
 import 'package:flutter_platzi_travels/src/gradient_back.dart';
 import 'package:flutter_platzi_travels/src/reviewList.dart';
@@ -10,6 +11,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(
+        SystemUiOverlayStyle(statusBarColor: Colors.transparent));
     return MaterialApp(
       title: 'Material App',
       home: Scaffold(
@@ -30,7 +33,7 @@ class MyApp extends StatelessWidget {
                 ReviewList()
               ],
             ),
-            GradientBack()
+            GradientBack("Popular")
           ],
         ),
       ),
