@@ -1,5 +1,6 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
+import 'package:flutter_platzi_travels/src/Button_ink.dart';
 
 class DescriptionPlace extends StatelessWidget {
   final String namePlace;
@@ -84,7 +85,14 @@ class DescriptionPlace extends StatelessWidget {
       ),
     );
     return Column(
-      children: [titleStars, description],
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        titleStars,
+        description,
+        ButtonInk(
+          buttonText: "Navigate",
+        )
+      ],
     );
   }
 }
