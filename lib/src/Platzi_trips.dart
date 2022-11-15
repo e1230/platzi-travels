@@ -26,22 +26,22 @@ class _PlatziTripsState extends State<PlatziTrips> {
 
   @override
   Widget build(BuildContext context) {
-    return PlatziTripsCupertino();
-    // return Scaffold(
-    //   body: widgetsChildren[indexTap],
-    //   bottomNavigationBar: Theme(
-    //     data: Theme.of(context)
-    //         .copyWith(canvasColor: Colors.white, primaryColor: Colors.purple),
-    //     child: BottomNavigationBar(
-    //       onTap: onTapTapped,
-    //       currentIndex: indexTap,
-    //       items: [
-    //         BottomNavigationBarItem(icon: Icon(Icons.home), label: ""),
-    //         BottomNavigationBarItem(icon: Icon(Icons.search), label: ""),
-    //         BottomNavigationBarItem(icon: Icon(Icons.person), label: ""),
-    //       ],
-    //     ),
-    //   ),
-    // );
+    //return PlatziTripsCupertino();
+    return Scaffold(
+      body: widgetsChildren[indexTap],
+      bottomNavigationBar: Theme(
+        data: Theme.of(context)
+            .copyWith(canvasColor: Colors.white, primaryColor: Colors.purple),
+        child: BottomNavigationBar(
+          onTap: onTapTapped,
+          currentIndex: indexTap,
+          items: [
+            BottomNavigationBarItem(icon: Icon(Icons.home), label: ""),
+            BottomNavigationBarItem(icon: Icon(Icons.search), label: ""),
+            BottomNavigationBarItem(icon: Icon(Icons.person), label: ""),
+          ],
+        ),
+      ),
+    );
   }
 }
